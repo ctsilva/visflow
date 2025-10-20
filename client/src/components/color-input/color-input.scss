@@ -1,6 +1,6 @@
 @import '../../common/style/index';
 
-/deep/ .vc-chrome {
+::v-deep .vc-chrome {
   position: absolute;
   right: $padding-lr-size;
   z-index: $zIndexVueColor;

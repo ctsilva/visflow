@@ -11,6 +11,22 @@ if (env.ENVIRONMENT === 'production') {
 
 module.exports = {
   baseUrl,
+  devServer: {
+    historyApiFallback: true,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8000',
+        changeOrigin: true,
+      },
+    },
+  },
+  css: {
+    loaderOptions: {
+      sass: {
+        implementation: require('sass'),
+      },
+    },
+  },
   configureWebpack: config => {
     const plugins = [
       new StyleLintPlugin(),

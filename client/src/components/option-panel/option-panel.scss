@@ -14,7 +14,7 @@
     @extend %divider;
   }
 
-  /deep/ button.mini.btn-outline-secondary {
+  ::v-deep button.mini.btn-outline-secondary {
     text-align: center;
     min-width: 2rem;
     font-size: .75rem;

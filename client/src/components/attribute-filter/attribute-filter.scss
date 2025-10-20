@@ -8,6 +8,6 @@
   overflow: auto;
 }
 
-#sampling-on-distinct-values /deep/ .custom-control-label {
+#sampling-on-distinct-values ::v-deep .custom-control-label {
   display: flex;
 }

@@ -7,7 +7,7 @@
   background-color: white;
   @extend %box;
 
-  /deep/ li {
+  ::v-deep li {
     font-size: $font-size;
     cursor: pointer;
     @extend %list-item, %ui-font;

@@ -1,7 +1,7 @@
 @import '../../common/style/index';
 
 #select {
-  /deep/ {
+  ::v-deep {
     .dropdown-toggle {
       cursor: all-scroll;
 

@@ -1,7 +1,7 @@
 @import '../../common/style/index';
 
 .vf-select {
-  /deep/ {
+  ::v-deep {
     .dropdown-toggle {
       max-height: 300px;
       overflow-y: auto;
@@ -125,7 +125,7 @@
     }
   }
 
-  &.not-clearable /deep/ {
+  &.not-clearable ::v-deep {
     .dropdown-toggle .clear {
       display: none;
     }

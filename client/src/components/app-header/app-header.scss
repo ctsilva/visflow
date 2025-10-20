@@ -14,11 +14,11 @@
     }
   }
 
-  /deep/ .dropdown-toggle > span {
+  ::v-deep .dropdown-toggle > span {
     color: #333;
   }
 
-  /deep/ .dropdown-item {
+  ::v-deep .dropdown-item {
     outline: none;
     display: flex;
 

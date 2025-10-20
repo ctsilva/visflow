@@ -1,7 +1,7 @@
 @import '../../common/style/index';
 
 #table {
-  /deep/ .btn-outline-secondary {
+  ::v-deep .btn-outline-secondary {
     padding-left: $padding-size-lg;
     padding-right: $padding-size-lg;
 
@@ -14,7 +14,7 @@
     }
   }
 
-  /deep/ .dataTables_length {
+  ::v-deep .dataTables_length {
     .custom-select {
       width: 3rem;
       -webkit-appearance: none; // remove webkit <select> arrows
@@ -28,11 +28,11 @@
     }
   }
 
-  /deep/ label {
+  ::v-deep label {
     margin-bottom: 0;
   }
 
-  /deep/ .dataTables_filter {
+  ::v-deep .dataTables_filter {
     label {
       float: right;
       text-align: right;
@@ -43,7 +43,7 @@
     }
   }
 
-  /deep/ .dataTables_info {
+  ::v-deep .dataTables_info {
     .select-info {
       margin-left: $margin-size;
     }

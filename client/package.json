@@ -14,6 +14,7 @@
     "test": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "sass": "^1.93.2",
     "vue": "2.5.16",
     "vue-class-component": "^6.0.0",
     "vue-property-decorator": "^6.0.0",
@@ -69,7 +70,6 @@
     "lodash": "^4.17.10",
     "moment": "^2.22.2",
     "moment-timezone": "^0.5.21",
-    "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
     "stylelint": "^9.2.1",
     "stylelint-config-recommended-scss": "^3.2.0",

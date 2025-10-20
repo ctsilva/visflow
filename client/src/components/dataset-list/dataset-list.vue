@@ -12,7 +12,7 @@
 <style scoped lang="scss">
 @import '../../common/style/index';
 #table {
-  /deep/ .form-control[type=search] {
+  ::v-deep .form-control[type=search] {
     width: $modal-datatables-search-width;
   }
 }
