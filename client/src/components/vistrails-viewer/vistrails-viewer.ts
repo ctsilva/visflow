@@ -29,19 +29,25 @@ export default class VisTrailsViewer extends Vue {
   private apiBase: string = '/api';
 
   public mounted() {
+    console.log('[VisTrails Viewer] Component mounted');
+    console.log('[VisTrails Viewer] API base:', this.apiBase);
     this.loadWorkflows();
   }
 
   private async loadWorkflows() {
+    console.log('[VisTrails Viewer] Loading workflows from:', `${this.apiBase}/workflows`);
     this.loading = true;
     this.error = '';
 
     try {
       const response = await axios.get(`${this.apiBase}/workflows`);
+      console.log('[VisTrails Viewer] Got response:', response);
+      console.log('[VisTrails Viewer] Response data:', response.data);
       this.workflows = response.data;
-    } catch (err: any) {
-      this.error = `Failed to load workflows: ${err.message}`;
-      console.error('Error loading workflows:', err);
+      console.log('[VisTrails Viewer] Loaded', this.workflows.length, 'workflows');
+    } catch (err) {
+      this.error = `Failed to load workflows: ${(err as any).message}`;
+      console.error('[VisTrails Viewer] Error loading workflows:', err);
     } finally {
       this.loading = false;
     }
@@ -72,8 +78,8 @@ export default class VisTrailsViewer extends Vue {
         this.loadVersionTreeSVG(),
         this.loadWorkflowSVG(),
       ]);
-    } catch (err: any) {
-      this.error = `Failed to load workflow metadata: ${err.message}`;
+    } catch (err) {
+      this.error = `Failed to load workflow metadata: ${(err as any).message}`;
       console.error('Error loading workflow metadata:', err);
     }
   }
@@ -92,8 +98,8 @@ export default class VisTrailsViewer extends Vue {
         { responseType: 'text' }
       );
       this.versionTreeSVG = response.data;
-    } catch (err: any) {
-      this.treeError = `Failed to load version tree: ${err.message}`;
+    } catch (err) {
+      this.treeError = `Failed to load version tree: ${(err as any).message}`;
       console.error('Error loading version tree:', err);
     } finally {
       this.loadingTree = false;
@@ -114,8 +120,8 @@ export default class VisTrailsViewer extends Vue {
         { responseType: 'text' }
       );
       this.workflowSVG = response.data;
-    } catch (err: any) {
-      this.workflowError = `Failed to load workflow SVG: ${err.message}`;
+    } catch (err) {
+      this.workflowError = `Failed to load workflow SVG: ${(err as any).message}`;
       console.error('Error loading workflow SVG:', err);
     } finally {
       this.loadingWorkflow = false;
